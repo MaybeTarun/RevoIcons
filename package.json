@@ -1,11 +1,12 @@
 {
   "name": "revoicons",
-  "version": "1.0.1",
+  "version": "1.0.4",
   "description": "A simple icon library for HTML - Use icons as custom HTML elements",
   "main": "index.js",
   "module": "index.js",
   "files": [
     "index.js",
+    "index.d.ts",
     "icons/",
     "README.md"
   ],
