@@ -1,0 +1,24 @@
+{
+  "name": "revoicons",
+  "version": "1.0.0",
+  "description": "revo icon library",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MaybeTarun/RevoIcons.git"
+  },
+  "keywords": [
+    "revo",
+    "icons",
+    "library"
+  ],
+  "author": "Tarun Gupta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MaybeTarun/RevoIcons/issues"
+  },
+  "homepage": "https://github.com/MaybeTarun/RevoIcons#readme"
+}
