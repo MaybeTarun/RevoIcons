@@ -1,10 +1,17 @@
 {
   "name": "revoicons",
-  "version": "1.0.0",
-  "description": "revo icon library",
+  "version": "1.0.1",
+  "description": "A simple icon library for HTML - Use icons as custom HTML elements",
   "main": "index.js",
+  "module": "index.js",
+  "files": [
+    "index.js",
+    "icons/",
+    "README.md"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublishOnly": "echo 'Ready to publish!'"
   },
   "repository": {
     "type": "git",
@@ -13,10 +20,14 @@
   "keywords": [
     "revo",
     "icons",
-    "library"
+    "library",
+    "html",
+    "custom-elements",
+    "svg",
+    "web-components"
   ],
   "author": "Tarun Gupta",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/MaybeTarun/RevoIcons/issues"
   },
