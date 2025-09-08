@@ -7,12 +7,12 @@ const Revo = ({ size = 32, color = "black", fill = "none", ...props }) => (
     xmlns="http://www.w3.org/2000/svg"
     {...props}
   >
-    <g clipPath="url(#revo)">
+    <g clipPath="url(#revo-revo)">
       <circle cx="250" cy="250" r="225" fill={fill} stroke={color} strokeWidth="50" />
       <path d="M247 347L362.5 222.5M362.5 222.5H265M362.5 222.5V317.5" stroke={color} strokeWidth="50" strokeLinecap="round" strokeLinejoin="round" />
     </g>
     <defs>
-      <clipPath id="revo">
+      <clipPath id="revo-revo">
         <rect width="500" height="500" fill="white" />
       </clipPath>
     </defs>

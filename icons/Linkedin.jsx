@@ -7,7 +7,7 @@ const Linkedin = ({ size = 32, color = "black", fill = "none", ...props }) => (
     xmlns="http://www.w3.org/2000/svg"
     {...props}
   >
-    <g clipPath="url(#clip0_2010_65)">
+    <g clipPath="url(#revo-linkedin)">
       <path d="M27 4H5C4.44772 4 4 4.44772 4 5V27C4 27.5523 4.44772 28 5 28H27C27.5523 28 28 27.5523 28 27V5C28 4.44772 27.5523 4 27 4Z" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill={fill}/>
       <path d="M15 14V22" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
       <path d="M11 14V22" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -15,7 +15,7 @@ const Linkedin = ({ size = 32, color = "black", fill = "none", ...props }) => (
       <path d="M11 12C11.8284 12 12.5 11.3284 12.5 10.5C12.5 9.67157 11.8284 9 11 9C10.1716 9 9.5 9.67157 9.5 10.5C9.5 11.3284 10.1716 12 11 12Z" fill={color}/>
     </g>
     <defs>
-      <clipPath id="clip0_2010_65">
+      <clipPath id="revo-linkedin">
         <rect width="32" height="32" fill="white"/>
       </clipPath>
     </defs>
