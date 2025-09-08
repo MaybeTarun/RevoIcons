@@ -8,12 +8,7 @@ export interface IconProps extends SVGProps<SVGSVGElement> {
 }
 
 export declare const Revo: React.FC<IconProps>
+export declare const RevoFilled: React.FC<IconProps>
 export declare const Linkedin: React.FC<IconProps>
+export declare const LinkedinFilled: React.FC<IconProps>
 
-
-declare const _default: {
-  Revo: React.FC<IconProps>
-  Linkedin: React.FC<IconProps>
-}
-
-export default _default
