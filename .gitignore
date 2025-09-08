@@ -4,8 +4,11 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Test folder (local testing only)
+# Test folder for testing
 test/
+
+#secret khikhi
+iconssvg/
 
 # Build outputs
 dist/
@@ -32,9 +35,6 @@ build/
 .Trashes
 ehthumbs.db
 Thumbs.db
-
-# environment file
-.env
 
 # Logs
 logs
