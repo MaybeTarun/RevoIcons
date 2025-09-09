@@ -1,6 +1,6 @@
 {
   "name": "revoicons",
-  "version": "1.2.8",
+  "version": "1.2.9",
   "description": "Icon Library",
   "main": "index.js",
   "module": "index.js",

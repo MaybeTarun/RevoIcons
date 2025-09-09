@@ -1,4 +1,4 @@
-const BehanceFilled = ({ size = 32, color = "none", ...props }) => (
+const BehanceFilled = ({ size = 32, color = "black", ...props }) => (
   <svg
     width={size}
     height={size}

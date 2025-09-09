@@ -1,4 +1,4 @@
-const InstagramFilled = ({ size = 32, color = "none", ...props }) => (
+const InstagramFilled = ({ size = 32, color = "black", ...props }) => (
   <svg
     width={size}
     height={size}

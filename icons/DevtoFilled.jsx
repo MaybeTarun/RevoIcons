@@ -1,4 +1,4 @@
-const DevtoFilled = ({ size = 32, color = "none", ...props }) => (
+const DevtoFilled = ({ size = 32, color = "black", ...props }) => (
   <svg
     width={size}
     height={size}

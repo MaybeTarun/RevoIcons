@@ -1,4 +1,4 @@
-const LinkedinFilled = ({ size = 32, color = "none", ...props }) => (
+const LinkedinFilled = ({ size = 32, color = "black", ...props }) => (
   <svg
     width={size}
     height={size}

@@ -7,7 +7,7 @@ const Devto = ({ size = 32, color = "black", ...props }) => (
     xmlns="http://www.w3.org/2000/svg"
     {...props}
   >
-    <g clipPath="url(#devto)" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M29 8H3a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h26a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1" fill={color}/><path d="M18 12h-3v8h3m-1-4h-2m6.5-4 2.25 8L26 12M7 12h1a3 3 0 0 1 3 3v2a3 3 0 0 1-3 3H7z"/></g><defs><clipPath id="devto"><path fill="#fff" d="M0 0h32v32H0z"/></clipPath></defs>
+    <g clipPath="url(#devto)" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M29 8H3a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h26a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1" fill="none"/><path d="M18 12h-3v8h3m-1-4h-2m6.5-4 2.25 8L26 12M7 12h1a3 3 0 0 1 3 3v2a3 3 0 0 1-3 3H7z"/></g><defs><clipPath id="devto"><path fill="#fff" d="M0 0h32v32H0z"/></clipPath></defs>
   </svg>
 )
 

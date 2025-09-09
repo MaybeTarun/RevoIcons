@@ -1,4 +1,4 @@
-const SnapchatFilled = ({ size = 32, color = "none", ...props }) => (
+const SnapchatFilled = ({ size = 32, color = "black", ...props }) => (
   <svg
     width={size}
     height={size}

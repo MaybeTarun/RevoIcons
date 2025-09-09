@@ -1,4 +1,4 @@
-const SoundcloudFilled = ({ size = 32, color = "none", ...props }) => (
+const SoundcloudFilled = ({ size = 32, color = "black", ...props }) => (
   <svg
     width={size}
     height={size}

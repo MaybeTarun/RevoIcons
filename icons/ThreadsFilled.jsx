@@ -1,4 +1,4 @@
-const ThreadsFilled = ({ size = 32, color = "none", ...props }) => (
+const ThreadsFilled = ({ size = 32, color = "black", ...props }) => (
   <svg
     width={size}
     height={size}
