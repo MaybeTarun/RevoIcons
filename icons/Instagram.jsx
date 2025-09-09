@@ -1,4 +1,4 @@
-const Instagram = ({ size = 32, color = "black", fill = "none", ...props }) => (
+const Instagram = ({ size = 32, color = "black", ...props }) => (
   <svg
     width={size}
     height={size}
@@ -7,7 +7,7 @@ const Instagram = ({ size = 32, color = "black", fill = "none", ...props }) => (
     xmlns="http://www.w3.org/2000/svg"
     {...props}
   >
-  <g clip-path="url(#instagram)"><path d="M22 4H10a6 6 0 0 0-6 6v12a6 6 0 0 0 6 6h12a6 6 0 0 0 6-6V10a6 6 0 0 0-6-6" stroke={color} stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill={fill}/><path d="M16 21a5 5 0 1 0 0-10 5 5 0 0 0 0 10Z" stroke={color} stroke-width="2" stroke-miterlimit="10"/><path d="M22.5 11a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3" fill={color}/></g><defs><clipPath id="instagram"><path fill="#fff" d="M0 0h32v32H0z"/></clipPath></defs>
+  <g clipPath="url(#instagram)"><path d="M22 4H10a6 6 0 0 0-6 6v12a6 6 0 0 0 6 6h12a6 6 0 0 0 6-6V10a6 6 0 0 0-6-6" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill={color}/><path d="M16 21a5 5 0 1 0 0-10 5 5 0 0 0 0 10Z" stroke={color} strokeWidth="2" stroke-miterlimit="10"/><path d="M22.5 11a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3" fill={color}/></g><defs><clipPath id="instagram"><path fill="#fff" d="M0 0h32v32H0z"/></clipPath></defs>
  </svg>
 )
 

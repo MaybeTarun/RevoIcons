@@ -1,4 +1,4 @@
-const Revo = ({ size = 32, color = "black", fill = "none", ...props }) => (
+const Revo = ({ size = 32, color = "black", ...props }) => (
   <svg
     width={size}
     height={size}
@@ -8,7 +8,7 @@ const Revo = ({ size = 32, color = "black", fill = "none", ...props }) => (
     {...props}
   >
     <g clipPath="url(#revo-revo)">
-      <circle cx="250" cy="250" r="225" fill={fill} stroke={color} strokeWidth="50" />
+      <circle cx="250" cy="250" r="225" fill={color} stroke={color} strokeWidth="50" />
       <path d="M247 347L362.5 222.5M362.5 222.5H265M362.5 222.5V317.5" stroke={color} strokeWidth="50" strokeLinecap="round" strokeLinejoin="round" />
     </g>
     <defs>
