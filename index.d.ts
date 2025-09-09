@@ -13,4 +13,22 @@ export declare const Linkedin: React.FC<IconProps>
 export declare const LinkedinFilled: React.FC<IconProps>
 export declare const Behance: React.FC<IconProps>
 export declare const BehanceFilled: React.FC<IconProps>
+export declare const Devto: React.FC<IconProps>
+export declare const DevtoFilled: React.FC<IconProps>
+export declare const Facebook: React.FC<IconProps>
+export declare const FacebookFilled: React.FC<IconProps>
+export declare const Fediverse: React.FC<IconProps>
+export declare const FediverseFilled: React.FC<IconProps>
+export declare const Github: React.FC<IconProps>
+export declare const GithubFilled: React.FC<IconProps>
+export declare const Goodreads: React.FC<IconProps>
+export declare const GoodreadsFilled: React.FC<IconProps>
+export declare const Instagram: React.FC<IconProps>
+export declare const InstagramFilled: React.FC<IconProps>
+export declare const Snapchat: React.FC<IconProps>
+export declare const SnapchatFilled: React.FC<IconProps>
+export declare const Soundcloud: React.FC<IconProps>
+export declare const SoundcloudFilled: React.FC<IconProps>
+export declare const Threads: React.FC<IconProps>
+export declare const ThreadsFilled: React.FC<IconProps>
 

@@ -31,6 +31,7 @@ All icons accept the following props:
 - `color`: String - Sets the stroke color
 - `fill`: String - Sets the background color
 - All standard SVG props are also supported
+- By Default all icons are black and white
 
 ## Available Icons (Regular and Filled)
 

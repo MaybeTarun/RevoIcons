@@ -1,4 +1,4 @@
-const RevoFilled = ({ size = 32, color = "white", fill = "black", ...props }) => (
+const RevoFilled = ({ size = 32, color = "none", fill = "black", ...props }) => (
   <svg
     width={size}
     height={size}
