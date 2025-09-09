@@ -7,7 +7,7 @@ const FacebookFilled = ({ size = 32, color = "none", fill = "black", ...props })
     xmlns="http://www.w3.org/2000/svg"
     {...props}
   >
-    <g clip-path="url(#facebookfilled)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 28c6.627 0 12-5.373 12-12S22.627 4 16 4 4 9.373 4 16s5.373 12 12 12" fill={fill} stroke={fill}/><path d="M21 11h-2a3 3 0 0 0-3 3v14m-4-10h8" stroke={color}/></g><defs><clipPath id="facebookfilled"><path fill="#fff" d="M0 0h32v32H0z"/></clipPath></defs>
+    <g clip-path="url(#facebookfilled)" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 28c6.627 0 12-5.373 12-12S22.627 4 16 4 4 9.373 4 16s5.373 12 12 12" fill={fill} stroke={fill}/><path d="M21 11h-2a3 3 0 0 0-3 3v14m-4-10h8"/></g><defs><clipPath id="facebookfilled"><path fill="#fff" d="M0 0h32v32H0z"/></clipPath></defs>
   </svg>
 )
 
