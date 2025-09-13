@@ -22,3 +22,8 @@ export { default as Soundcloud } from "./icons/Soundcloud.jsx";
 export { default as SoundcloudFilled } from "./icons/SoundcloudFilled.jsx";
 export { default as Threads } from "./icons/Threads.jsx";
 export { default as ThreadsFilled } from "./icons/ThreadsFilled.jsx";
+export { default as Home } from "./icons/Home.jsx";
+export { default as HomeFilled } from "./icons/HomeFilled.jsx";
+export { default as Envelope } from "./icons/Envelope.jsx";
+export { default as EnvelopeFilled } from "./icons/EnvelopeFilled.jsx";
+export { default as ArrowUpRight } from "./icons/ArrowUpRight.jsx";
