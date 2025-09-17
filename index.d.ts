@@ -35,4 +35,4 @@ export declare const HomeFilled: React.FC<IconProps>
 export declare const Envelope: React.FC<IconProps>
 export declare const EnvelopeFilled: React.FC<IconProps>
 export declare const ArrowUpRight: React.FC<IconProps>
-
+export declare const Copy: React.FC<IconProps>

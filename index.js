@@ -27,3 +27,4 @@ export { default as HomeFilled } from "./icons/HomeFilled.jsx";
 export { default as Envelope } from "./icons/Envelope.jsx";
 export { default as EnvelopeFilled } from "./icons/EnvelopeFilled.jsx";
 export { default as ArrowUpRight } from "./icons/ArrowUpRight.jsx";
+export { default as Copy } from "./icons/Copy.jsx";

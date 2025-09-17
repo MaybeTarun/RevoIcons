@@ -38,6 +38,7 @@ All icons accept the following props:
 - `Revo` - Revo icon
 - `Linkedin` - Linkedin Logo
 - `Behance` - Behance Logo
+- more update soon
 
 ## License
 
