@@ -30,9 +30,10 @@ export declare const Soundcloud: React.FC<IconProps>
 export declare const SoundcloudFilled: React.FC<IconProps>
 export declare const Threads: React.FC<IconProps>
 export declare const ThreadsFilled: React.FC<IconProps>
-export declare const Home: React.FC<IconProps>
-export declare const HomeFilled: React.FC<IconProps>
+export declare const House: React.FC<IconProps>
+export declare const HouseFilled: React.FC<IconProps>
 export declare const Envelope: React.FC<IconProps>
 export declare const EnvelopeFilled: React.FC<IconProps>
 export declare const ArrowUpRight: React.FC<IconProps>
 export declare const Copy: React.FC<IconProps>
+export declare const Infinity: React.FC<IconProps>
