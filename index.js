@@ -29,3 +29,6 @@ export { default as EnvelopeFilled } from "./icons/EnvelopeFilled.jsx";
 export { default as ArrowUpRight } from "./icons/ArrowUpRight.jsx";
 export { default as Copy } from "./icons/Copy.jsx";
 export { default as Infinity } from "./icons/Infinity.jsx";
+export { default as Folder } from "./icons/Folder.jsx";
+export { default as FolderOpen } from "./icons/FolderOpen.jsx";
+export { default as File } from "./icons/File.jsx";

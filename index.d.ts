@@ -37,3 +37,6 @@ export declare const EnvelopeFilled: React.FC<IconProps>
 export declare const ArrowUpRight: React.FC<IconProps>
 export declare const Copy: React.FC<IconProps>
 export declare const Infinity: React.FC<IconProps>
+export declare const Folder: React.FC<IconProps>
+export declare const FolderOpen: React.FC<IconProps>
+export declare const File: React.FC<IconProps>
