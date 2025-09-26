@@ -1,5 +1,5 @@
 export { default as Alarm } from "./icons/Alarm";
-export { default as AppleLogo } from "./icons/AppleLogo";
+export { default as Apple } from "./icons/Apple";
 export { default as ApproximateEquals } from "./icons/ApproximateEquals";
 export { default as ArrowArcLeft } from "./icons/ArrowArcLeft";
 export { default as ArrowArcRight } from "./icons/ArrowArcRight";
