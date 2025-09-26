@@ -1,6 +1,6 @@
 {
   "name": "revoicons",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Icon Library",
   "main": "dist/index.cjs",
   "module": "dist/index.mjs",
