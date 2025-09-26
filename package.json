@@ -1,32 +1,30 @@
 {
   "name": "revoicons",
-  "version": "1.3.6",
+  "version": "2.0.0",
   "description": "Icon Library",
-  "main": "index.js",
-  "module": "index.js",
-  "types": "index.d.ts",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
   "exports": {
     ".": {
-      "types": "./index.d.ts",
-      "import": "./index.js",
-      "require": "./index.js"
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
     },
     "./icons/*": {
-      "types": "./index.d.ts",
-      "import": "./icons/*.jsx",
-      "require": "./icons/*.jsx"
+      "types": "./dist/index.d.ts",
+      "import": "./dist/icons/*.mjs",
+      "require": "./dist/icons/*.cjs"
     }
   },
   "sideEffects": false,
   "files": [
-    "index.js",
-    "index.d.ts",
-    "icons/",
+    "dist",
     "README.md"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "prepublishOnly": "echo 'Ready to publish!'"
+    "build": "tsup src/index.ts --format esm,cjs --dts",
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -36,20 +34,23 @@
     "revo",
     "icons",
     "library",
-    "html",
-    "custom-elements",
     "svg",
-    "web-components"
+    "react",
+    "nextjs"
   ],
   "author": "Tarun Gupta",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/MaybeTarun/RevoIcons/issues"
   },
-  "homepage": "https://github.com/MaybeTarun/RevoIcons#readme"
-  ,
+  "homepage": "https://github.com/MaybeTarun/RevoIcons#readme",
   "peerDependencies": {
-    "react": ">=17 || >=18",
-    "react-dom": ">=17 || >=18"
+    "react": ">=17",
+    "react-dom": ">=17"
+  },
+  "devDependencies": {
+    "@svgr/cli": "^8.1.0",
+    "tsup": "^8.5.0",
+    "typescript": "^5.9.2"
   }
 }
