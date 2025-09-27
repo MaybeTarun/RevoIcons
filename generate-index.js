@@ -1,23 +1,28 @@
 const fs = require("fs");
 const path = require("path");
 
-const iconsDir = path.join(__dirname, "src/icons");
+const iconsDirs = [
+  { dir: path.join(__dirname, "src/icons"), folderName: "icons" },
+  { dir: path.join(__dirname, "src/iconsfilled"), folderName: "iconsfilled" }
+];
+
 const outputFile = path.join(__dirname, "src/index.ts");
 
-const files = fs.readdirSync(iconsDir).filter(f => f.endsWith(".tsx") || f.endsWith(".js"));
-
 // Convert filenames to PascalCase for React component names
-const toPascalCase = str =>
-  str
-    .replace(/(^\w|[-_](\w))/g, (_, c1, c2) => (c1 || c2).toUpperCase());
+const toPascalCase = (str) =>
+  str.replace(/(^\w|[-_](\w))/g, (_, c1, c2) => (c1 || c2).toUpperCase());
 
-const exportLines = files
-  .map(f => {
+let exportLines = [];
+
+iconsDirs.forEach(({ dir, folderName }) => {
+  const files = fs.readdirSync(dir).filter((f) => f.endsWith(".tsx") || f.endsWith(".js"));
+  
+  files.forEach((f) => {
     const name = toPascalCase(path.basename(f, path.extname(f)));
     const fileNameWithoutExt = path.basename(f, path.extname(f));
-    return `export { default as ${name} } from "./icons/${fileNameWithoutExt}";`;
-  })
-  .join("\n");
+    exportLines.push(`export { default as ${name} } from "./${folderName}/${fileNameWithoutExt}";`);
+  });
+});
 
-fs.writeFileSync(outputFile, exportLines);
-console.log("✅ src/index.ts generated with all icons");
+fs.writeFileSync(outputFile, exportLines.join("\n"));
+console.log("✅ src/index.ts generated with all icons (normal + filled)");
