@@ -8,7 +8,6 @@ const iconsDirs = [
 
 const outputFile = path.join(__dirname, "src/index.ts");
 
-// Convert filenames to PascalCase for React component names
 const toPascalCase = (str) =>
   str.replace(/(^\w|[-_](\w))/g, (_, c1, c2) => (c1 || c2).toUpperCase());
 

@@ -9,14 +9,12 @@ const tsxFilledDir = path.join(__dirname, "src/iconsfilled");
 const svgDir = path.join(__dirname, "icons");
 const svgFilledDir = path.join(__dirname, "iconsfilled");
 
-// Ensure target folders exist
 [tsxFilledDir, svgFilledDir].forEach((dir) => {
   if (!fs.existsSync(dir)) {
     fs.mkdirSync(dir, { recursive: true });
   }
 });
 
-// Helper function to move files
 function moveFilledFiles(fromDir, toDir, ext) {
   const files = fs.readdirSync(fromDir).filter((f) => f.endsWith(ext));
 
@@ -26,13 +24,10 @@ function moveFilledFiles(fromDir, toDir, ext) {
       const newPath = path.join(toDir, file);
 
       fs.renameSync(oldPath, newPath);
-      console.log(`✅ Moved: ${file} → ${path.basename(toDir)}`);
     }
   });
 }
 
-// Process both types
 moveFilledFiles(tsxDir, tsxFilledDir, ".tsx");
 moveFilledFiles(svgDir, svgFilledDir, ".svg");
 
-console.log("🎉 Done categorizing .tsx and .svg icons!");

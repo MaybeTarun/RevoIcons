@@ -10,6 +10,7 @@ test/
 #secret khikhi
 icons/
 iconsfilled/
+cmd.txt
 
 # Build outputs
 dist/

@@ -8,13 +8,11 @@ function processNormalIcons(dir) {
     const filePath = path.join(dir, file);
     let content = fs.readFileSync(filePath, "utf-8");
 
-    // Add props: size, color
     content = content.replace(
       /const (\w+) =.*\(/,
       `const $1 = ({ size = 32, color = 'currentColor', ...props }: SVGProps<SVGSVGElement> & { size?: number; color?: string }) => (`
     );
 
-    // Fix <svg> tag
     content = content.replace(/<svg([^>]*)>/, (match, attrs) => {
       attrs = attrs
         .replace(/\s*width={?["']?.+?["']?}?/g, "")
@@ -30,16 +28,14 @@ function processNormalIcons(dir) {
       return `<svg${attrs} width={size} height={size} stroke={color} fill="none" {...props}>`;
     });
 
-    // Replace all stroke colors with stroke={color}
     content = content.replace(/stroke=["'](#[0-9a-fA-F]+|currentColor)["']/g, "stroke={color}");
 
-    // Force fill to none
     content = content.replace(/fill=["'](#[0-9a-fA-F]+|currentColor|none)["']/g, 'fill="none"');
 
     fs.writeFileSync(filePath, content, "utf-8");
   });
 
-  console.log(`✅ Processed normal icons in ${dir}`);
+  console.log("normal done");
 }
 
 function processFilledIcons(dir) {
@@ -49,13 +45,11 @@ function processFilledIcons(dir) {
     const filePath = path.join(dir, file);
     let content = fs.readFileSync(filePath, "utf-8");
 
-    // Add props: size, color
     content = content.replace(
       /const (\w+) =.*\(/,
       `const $1 = ({ size = 32, color = 'currentColor', ...props }: SVGProps<SVGSVGElement> & { size?: number; color?: string }) => (`
     );
 
-    // Fix <svg> tag
     content = content.replace(/<svg([^>]*)>/, (match, attrs) => {
       attrs = attrs
         .replace(/\s*width={?["']?.+?["']?}?/g, "")
@@ -71,15 +65,12 @@ function processFilledIcons(dir) {
       return `<svg${attrs} width={size} height={size} fill={color} {...props}>`;
     });
 
-    // Replace all fills with fill={color}
     content = content.replace(/fill=["'](#[0-9a-fA-F]+|currentColor|none)["']/g, "fill={color}");
-
-    // Leave strokes untouched
 
     fs.writeFileSync(filePath, content, "utf-8");
   });
 
-  console.log(`✅ Processed filled icons in ${dir}`);
+  console.log("filled done");
 }
 
 const iconsDir = path.join(__dirname, "src/icons");
