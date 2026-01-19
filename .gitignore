@@ -11,6 +11,7 @@ test/
 icons/
 iconsfilled/
 cmd.txt
+SVGs/
 
 # Build outputs
 dist/

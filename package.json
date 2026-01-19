@@ -1,6 +1,6 @@
 {
   "name": "revoicons",
-  "version": "2.1.0",
+  "version": "3.0.1",
   "description": "Icon Library",
   "main": "dist/index.cjs",
   "module": "dist/index.mjs",
@@ -23,7 +23,8 @@
     "README.md"
   ],
   "scripts": {
-    "build": "tsup src/index.ts src/icons/**/*.ts --format esm,cjs --dts",
+    "build:icons": "tsx scripts/build.ts",
+    "build": "npm run build:icons && tsup src/index.ts src/icons/**/*.tsx --format esm,cjs --dts",
     "prepublishOnly": "npm run build"
   },
   "repository": {
@@ -50,9 +51,12 @@
   },
   "devDependencies": {
     "@svgr/cli": "^8.1.0",
+    "@types/cheerio": "^0.22.35",
     "@types/react": "^19.1.13",
     "@types/react-dom": "^19.1.9",
+    "cheerio": "^1.1.2",
     "tsup": "^8.5.0",
+    "tsx": "^4.21.0",
     "typescript": "^5.9.2"
   }
 }

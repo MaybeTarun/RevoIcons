@@ -17,7 +17,7 @@ function App() {
   return (
     <div>
       <Revo />
-      <RevoFilled size={32} color="red" fill="green"/>
+      <RevoFilled size={32} color="red" outline="green"/>
     </div>
   );
 }
@@ -29,7 +29,7 @@ All icons accept the following props:
 
 - `size`: Number or string - Sets both width and height
 - `color`: String - Sets the stroke color
-- `fill`: String - Sets the background color
+- `outline`: String - Sets the outline color
 - All standard SVG props are also supported
 - By Default all icons are black and white
 
