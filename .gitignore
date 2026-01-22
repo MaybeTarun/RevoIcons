@@ -12,6 +12,8 @@ icons/
 iconsfilled/
 cmd.txt
 SVGs/
+svg/
+
 
 # Build outputs
 dist/

@@ -1,18 +1,17 @@
-
 import fs from 'fs';
 import path from 'path';
 import * as cheerio from 'cheerio';
 
 const SVGS_DIR = path.join(__dirname, '../SVGs/Logos');
-const ICONS_DIR = path.join(__dirname, '../src/icons');
+const ICONS_DIR = path.join(__dirname, '../src/icons/logos');
 const INDEX_FILE = path.join(__dirname, '../src/index.ts');
 
 const VARIANTS = ['Regular', 'Fill', 'Duotone', 'OGs'] as const;
 
-if (fs.existsSync(ICONS_DIR)) {
-  fs.rmSync(ICONS_DIR, { recursive: true, force: true });
+// Ensure target directory exists without deleting existing content
+if (!fs.existsSync(ICONS_DIR)) {
+  fs.mkdirSync(ICONS_DIR, { recursive: true });
 }
-fs.mkdirSync(ICONS_DIR, { recursive: true });
 
 function getIconNames() {
   const regularDir = path.join(SVGS_DIR, 'Regular');
@@ -21,7 +20,6 @@ function getIconNames() {
   return fs.readdirSync(regularDir)
     .filter(file => file.endsWith('.svg'))
     .map(file => {
-      // Remove "Regular.svg" suffix to get base name
       return file.replace('Regular.svg', '');
     });
 }
@@ -136,22 +134,44 @@ export const ${iconName} = ({ size = 48, color = '#333333', variant = 'regular',
   fs.writeFileSync(path.join(ICONS_DIR, `${iconName}.tsx`), componentContent);
 }
 
+function updateIndex() {
+  const ICONS_BASE_DIR = path.join(__dirname, '../src/icons');
+  const exports: string[] = [];
+
+  function scanDir(currentPath: string) {
+    if (!fs.existsSync(currentPath)) return;
+    const files = fs.readdirSync(currentPath);
+    for (const file of files) {
+      const fullPath = path.join(currentPath, file);
+      if (fs.statSync(fullPath).isDirectory()) {
+        scanDir(fullPath);
+      } else if (file.endsWith('.tsx')) {
+        const relativePath = path.relative(path.dirname(INDEX_FILE), fullPath)
+          .replace(/\\/g, '/')
+          .replace('.tsx', '');
+        exports.push(`export * from './${relativePath}';`);
+      }
+    }
+  }
+
+  scanDir(ICONS_BASE_DIR);
+  const uniqueExports = Array.from(new Set(exports)).sort();
+  fs.writeFileSync(INDEX_FILE, uniqueExports.join('\n'));
+}
+
 function main() {
   const icons = getIconNames();
-  console.log(`Found ${icons.length} icons.`);
-
-  const indexExports: string[] = [];
+  console.log(`Found ${icons.length} icons in Logos.`);
 
   icons.forEach(icon => {
     try {
       generateComponent(icon);
-      indexExports.push(`export * from './icons/${icon}';`);
     } catch (e) {
       console.error(`Failed to process ${icon}:`, e);
     }
   });
 
-  fs.writeFileSync(INDEX_FILE, indexExports.join('\n'));
+  updateIndex();
   console.log('Build complete.');
 }
 
